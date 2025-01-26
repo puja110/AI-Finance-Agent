@@ -1,7 +1,7 @@
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
-import phi.tools.yfinance import DuckDuckGo
+from phi.tools.duckduckgo import DuckDuckGo
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +30,9 @@ def get_stock_symbol(company: str) -> str:
     }
     return symbols.get(company, "Unknown")
 
-agent  = Agent(
+finance_agent  = Agent(
+    name="Finance Agent",
+    role="Get financial data",
     model=Groq(id="llama-3.3-70b-versatile"),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True), get_stock_symbol],
     show_tool_calls=True,
@@ -51,4 +53,12 @@ web_agent = Agent(
     markdown=True
 )
 
-agent.print_response("Summarize and compare analyst recommendations and fundamentals for SPOT and CRM") # user prompt
+agent_team = Agent(
+    model=Groq(id="llama-3.3-70b-versatile"),
+    team=[finance_agent, web_agent],
+    instructions=["Always include sources", "Use tables to display data"],
+    show_tool_calls=True,
+    markdown=True,
+)
+
+agent_team.print_response("Summarize and compare analyst recommendations and fundamentals for SPOT and CRM and share the latest news for SPOT", stream=True) # user prompt
