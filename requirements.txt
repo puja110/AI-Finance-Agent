@@ -1,0 +1,4 @@
+duckduckgo_search==7.4.4
+groq==0.18.0
+phidata==2.7.10
+yfinance==0.2.54

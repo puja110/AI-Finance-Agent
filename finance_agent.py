@@ -3,32 +3,9 @@ from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.tools.duckduckgo import DuckDuckGo
 from dotenv import load_dotenv
+from stock_utils import get_stock_symbol
 
 load_dotenv()
-
-def get_stock_symbol(company: str) -> str:
-    # Imp: The docstring helps register the tool and explains the tool's purpose
-    """Use this Function to fetch the stock symbol for a given company.
-
-    Args:
-        company_name (str): The name of the company.
-
-    Returns:
-        str: The stock symbol for the company
-    """
-    symbols = {
-        "Spotify": "SPOT",
-        "Infosys": "INFY",
-        "Google": "GOOGL",
-        "Apple": "AAPL",
-        "Microsoft": "MSFT",
-        "Amazon": "AMZN",
-        "Tesla": "TSLA",
-        "Salesforce": "CRM",
-        "Uber": "UBER",
-        "Zoom": "ZM",
-    }
-    return symbols.get(company, "Unknown")
 
 finance_agent  = Agent(
     name="Finance Agent",
