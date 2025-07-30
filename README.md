@@ -21,18 +21,24 @@ A powerful AI Agent built with [Streamlit](https://streamlit.io/), [Phidata](htt
 
 ## Project Structure
 
+```bash
 AI-Finance-Agent/
+├── app/
+│   └── main_app.py              # Main Streamlit app entry point
+│
 ├── agents/
-│ └── finance_agent.py # Sets up the AI agent and tools
-| └── multi_agent.py
+│   ├── finance_agent.py         # Sets up the Finance AI agent with tools
+│   └── multi_agent.py           # Optional: for future multi-agent systems
+│
 ├── helpers/
-│ └── finance_helper.py # Handles parsing and rendering logic
-| └── stock_utils.py # Utility to resolve company name to stock symbol
-├── main_app.py # Main Streamlit app entry point
-├── .env
-├── .gitignore
-├── requirements.txt
-└── README.md
+│   ├── finance_helper.py        # Parses and renders financial sections
+│   └── stock_utils.py           # Utility to resolve company name to stock symbol
+│
+├── .env                         # Environment variables (API keys, etc.)
+├── .gitignore                   # Git ignored files/folders
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project overview & instructions
+```
 
 ---
 
@@ -40,29 +46,36 @@ AI-Finance-Agent/
 
 ### 1. Clone the repository
 
-````bash
+```bash
 git clone https://github.com/puja110/AI-Finance-Agent.git
 cd AI-Finance-Agent
+```
 
 ### 2. Create and activate virtual environment
+
 ```bash
 python -m venv venv
 source venv/bin/activate        # On Windows: venv\Scripts\activate
+```
 
 ### 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
+```
 
 ### 4. Create .env file
+
 GROQ_API_KEY=your_groq_api_key_here
 
-
 ### 5. Run the Streamlit app
+
 ```bash
 streamlit run main_app.py
-
+```
 
 ## Example Inputs
+
 ### Try any of these in the input field:
 
 - SPOT (Spotify)
@@ -71,10 +84,7 @@ streamlit run main_app.py
 - Tesla
 - Apple
 
-
 ## Application Screenshots
-
 
 Author
 Built by Puja Shrestha
-````
