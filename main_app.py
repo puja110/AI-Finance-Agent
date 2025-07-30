@@ -1,7 +1,7 @@
 import streamlit as st
-from finance_agent import FinanceAgent
-from finance_helper import FinanceHelper
-from stock_utils import get_stock_symbol
+from agents.finance_agent import FinanceAgent
+from helpers.finance_helper import FinanceHelper
+from helpers.stock_utils import get_stock_symbol
 
 class FinanceApp:
     def __init__(self):
@@ -38,7 +38,6 @@ class FinanceApp:
 
         st.caption("Try these sample inputs: `SPOT`, `CRM`, `Infosys`, `Tesla`, or `Apple`.")
 
-# If run as main
 if __name__ == "__main__":
     app = FinanceApp()
     app.run()
