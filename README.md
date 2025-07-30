@@ -1,7 +1,3 @@
-# AI-Finance-Agent
-
-AI agent which compares stocks in terms of analyst recommendations company fundamentals
-
 # AI Finance Agent
 
 A powerful AI Agent built with [Streamlit](https://streamlit.io/), [Phidata](https://docs.phidata.com/introduction), and [Groq's LLaMA model](https://console.groq.com/) that summarizes financial data, analyst recommendations, the latest news for any stock symbol or company, and compares stocks in terms of company fundamentals.
@@ -88,11 +84,11 @@ streamlit run main_app.py
 
 <img width="1251" height="822" alt="financeag1" src="https://github.com/user-attachments/assets/0ef032fe-8d76-4962-b366-9e6529ad2288" />
 
-<img width="1253" height="840" alt="financeagent2" src="https://github.com/user-attachments/assets/4a0c242f-6d12-4fe1-9715-598decc0b8e0" />
-
 <img width="1268" height="714" alt="finaceage3" src="https://github.com/user-attachments/assets/33ccc6f5-9689-4576-bcb6-3a8f733bf7d1" />
 
 <img width="1260" height="835" alt="finaceag4" src="https://github.com/user-attachments/assets/7a7d2c4a-5a32-42e2-a001-f0059e398dbc" />
+
+<img width="795" height="758" alt="financestock5" src="https://github.com/user-attachments/assets/2e813120-798b-4a64-8399-8d9c08ab88b2" />
 
 Author
 Built by Puja Shrestha
