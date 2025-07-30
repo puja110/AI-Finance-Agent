@@ -11,7 +11,7 @@ class FinanceAgent:
     def __init__(self):
         self.agent = Agent(
             name="Finance Assistant",
-            model=Groq(id="llama3-8b-8192"),
+            model=Groq(id="llama-3.3-70b-versatile"), # llama3-8b-8192
             tools=[
                 YFinanceTools(
                     stock_price=True,

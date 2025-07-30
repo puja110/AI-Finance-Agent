@@ -34,8 +34,10 @@ class FinanceApp:
                     FinanceHelper.render_finance_output(final_output)
 
                     st.markdown("----")
-                    FinanceHelper.render_download_button(final_output)
+                    FinanceHelper.render_stock_chart(symbol)
 
+                    st.markdown("----")
+                    FinanceHelper.render_download_button(final_output)
                 except Exception as e:
                     st.error(f" An error occurred: {e}")
 

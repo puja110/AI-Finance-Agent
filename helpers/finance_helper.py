@@ -1,5 +1,7 @@
 import re
 import streamlit as st
+import yfinance as yf
+import plotly.graph_objects as go
 
 class FinanceHelper:
     @staticmethod
@@ -40,6 +42,23 @@ class FinanceHelper:
                 st.markdown(news, unsafe_allow_html=True)
             else:
                 FinanceHelper.render_news_list(news)
+
+    @staticmethod
+    def render_stock_chart(symbol):
+        st.subheader("Real-Time Stock Chart")
+        data = yf.Ticker(symbol).history(period="1mo", interval="1d")
+        if not data.empty:
+            fig = go.Figure(data=[go.Candlestick(
+                x=data.index,
+                open=data["Open"],
+                high=data["High"],
+                low=data["Low"],
+                close=data["Close"]
+            )])
+            fig.update_layout(xaxis_rangeslider_visible=False)
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("No chart data available for this symbol.")
 
     @staticmethod
     def render_download_button(report_text, filename="financial_report.txt"):
