@@ -1,5 +1,6 @@
 import streamlit as st
 from finance_agent import FinanceAgent
+from finance_helper import FinanceHelper
 from stock_utils import get_stock_symbol
 
 class FinanceApp:
@@ -29,6 +30,8 @@ class FinanceApp:
 
                     st.markdown("### Full Report")
                     st.code(final_output)
+
+                    FinanceHelper.render_finance_output(final_output)
 
                 except Exception as e:
                     st.error(f" An error occurred: {e}")
