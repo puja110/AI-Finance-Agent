@@ -12,6 +12,8 @@ A powerful AI Agent built with [Streamlit](https://streamlit.io/), [Phidata](htt
 - Fetch **latest news headlines** from DuckDuckGo
 - Organized with a clean component-based structure (Agents, Helpers, UI)
 - Built on **Groq’s LLaMA 3 model** using `phidata` agent framework
+- **View the Stock Chart** to analyze stocks visually
+- **Download the Full Report** for future reference
 
 ---
 
@@ -88,7 +90,8 @@ streamlit run main_app.py
 
 <img width="1260" height="835" alt="finaceag4" src="https://github.com/user-attachments/assets/7a7d2c4a-5a32-42e2-a001-f0059e398dbc" />
 
-<img width="795" height="758" alt="financestock5" src="https://github.com/user-attachments/assets/2e813120-798b-4a64-8399-8d9c08ab88b2" />
+<img width="1202" height="828" alt="finaag5" src="https://github.com/user-attachments/assets/b689e745-7a04-4fbc-ad24-eab8e9a4065b" />
 
-Author
-Built by Puja Shrestha
+## Author<br>
+Built by **Puja Shrestha**
+
