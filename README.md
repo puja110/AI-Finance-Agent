@@ -86,5 +86,13 @@ streamlit run main_app.py
 
 ## Application Screenshots
 
+<img width="1251" height="822" alt="financeag1" src="https://github.com/user-attachments/assets/0ef032fe-8d76-4962-b366-9e6529ad2288" />
+
+<img width="1253" height="840" alt="financeagent2" src="https://github.com/user-attachments/assets/4a0c242f-6d12-4fe1-9715-598decc0b8e0" />
+
+<img width="1268" height="714" alt="finaceage3" src="https://github.com/user-attachments/assets/33ccc6f5-9689-4576-bcb6-3a8f733bf7d1" />
+
+<img width="1260" height="835" alt="finaceag4" src="https://github.com/user-attachments/assets/7a7d2c4a-5a32-42e2-a001-f0059e398dbc" />
+
 Author
 Built by Puja Shrestha
