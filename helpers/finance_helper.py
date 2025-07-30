@@ -40,3 +40,12 @@ class FinanceHelper:
                 st.markdown(news, unsafe_allow_html=True)
             else:
                 FinanceHelper.render_news_list(news)
+
+    @staticmethod
+    def render_download_button(report_text, filename="financial_report.txt"):
+        st.download_button(
+            label="Download Final Report",
+            data=report_text,
+            file_name=filename,
+            mime="text/plain"
+        )
